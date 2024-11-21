@@ -1,0 +1,47 @@
+Steps:
+
+S:1 Creating folders in local vsc by opening file
+
+mkdir app
+mkdir grafana
+mkdir grafana\provisioning
+mkdir grafana\provisioning\datasources
+mkdir grafana\provisioning\dashboards
+mkdir terraform
+mkdir .github
+mkdir .github\workflows
+
+creating files
+
+New-Item -ItemType File app\app.py
+New-Item -ItemType File app\Dockerfile
+New-Item -ItemType File app\requirements.txt
+New-Item -ItemType File grafana\provisioning\datasources\influxdb.yaml
+New-Item -ItemType File grafana\provisioning\dashboards\dashboard.json
+New-Item -ItemType File terraform\main.tf
+New-Item -ItemType File terraform\variables.tf
+New-Item -ItemType File terraform\outputs.tf
+New-Item -ItemType File terraform\terraform.tfvars
+New-Item -ItemType File .github\workflows\ci-cd.yml
+New-Item -ItemType File docker-compose.yml
+New-Item -ItemType File README.md
+
+file verification
+
+Get-ChildItem -Recurse
+
+Pushing our local repo to the  github repo
+
+Local repo - For testing and developing before automation into production
+Github Repo - production env & automation
+
+my repo - https://github.com/pragadesh1/DaaS_Project
+
+git init
+git remote add origin https://github.com/pragadesh1/DaaS_Project
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git push -u origin main
+
+
