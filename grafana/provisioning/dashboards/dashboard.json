@@ -1,0 +1,20 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Moisture Sensor Data",
+      "datasource": "InfluxDB",
+      "targets": [
+        {
+          "query": "from(bucket: \"iot\") |> range(start: -1h)",
+          "type": "flux"
+        }
+      ],
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 
